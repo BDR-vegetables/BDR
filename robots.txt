@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bdr-vegetables.github.io/BDR/sitemap.xml

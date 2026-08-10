@@ -1,0 +1,17 @@
+{
+  "name": "BDR Vegetables Wholesale Shop",
+  "short_name": "BDR Vegetables",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FFFDF7",
+  "theme_color": "#166534",
+  "icons": [
+    {
+      "src": "./assets/logo/bdr-logo.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
