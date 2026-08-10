@@ -1,38 +1,40 @@
 /**
- * BDR Vegetables — Central Business Configuration
+ * BDR Vegetables — Central business configuration
  * ------------------------------------------------
- * Update business information, messages and vegetable categories here.
- * The website derives all phone, WhatsApp, email, map and visible contact
- * information from this file wherever practical.
+ * Edit this file for business/contact/location/message updates.
+ * Keep phone numbers as uninterrupted digits.
  */
-
-window.BDR_CONFIG = {
-  business: {
+window.BDR_DATA = {
+  BUSINESS: {
     name: "BDR Vegetables Wholesale Shop",
     shortName: "BDR Vegetables",
     tagline: "Fresh Vegetables • Wholesale Supply • Quality Service",
     owner: "Badeti Dharma Rao",
     shopNumbers: ["41", "42", "43", "44"],
-    description:
-      "BDR Vegetables Wholesale Shop delivers fresh produce, dependable wholesale supply and responsive service for retailers, businesses, traders and institutional buyers.",
+
+    primaryContact: {
+      name: "Ramesh",
+      phone: "9948122236",
+      international: "919948122236",
+      whatsappMessage:
+        "Hello BDR Vegetables, I would like to enquire about wholesale vegetable supply."
+    },
+
     contacts: {
       bdr: {
-        label: "BDR",
-        number: "9848122236",
-        whatsappMessage:
-          "Hello BDR Vegetables, I would like to enquire about wholesale vegetable supply."
-      },
-      ramesh: {
-        label: "Ramesh",
-        number: "9948122236",
+        name: "BDR",
+        phone: "9848122236",
+        international: "919848122236",
         whatsappMessage:
           "Hello BDR Vegetables, I would like to discuss a wholesale/supplier enquiry."
       },
-      shop1: { label: "Shop Staff", number: "9948279995" },
-      shop2: { label: "Shop Staff", number: "9948279994" }
+      shop1: { name: "Shop Staff", phone: "9948279995" },
+      shop2: { name: "Shop Staff", phone: "9948279994" }
     },
+
     email: "bdrvegetablesvja@gmail.com",
     emailSubject: "BDR Vegetables Business Enquiry",
+
     address: {
       market: "Sri Durga Malleswara Wholesale Vegetable Market",
       road: "Nunna Bypass Road",
@@ -40,36 +42,28 @@ window.BDR_CONFIG = {
       state: "Andhra Pradesh",
       pincode: "521212"
     },
+
     maps: "https://maps.app.goo.gl/eSxsCNk1rtC9Xaxu9?g_st=ac"
   },
 
-  hero: {
-    eyebrow: "Fresh produce. Direct business communication.",
-    titleLine1: "Fresh Vegetables.",
-    titleLine2: "Reliable Wholesale Supply.",
-    supplierCta: "Become a Supplier"
+  SITE_SETTINGS: {
+    defaultLanguage: "en",
+    defaultTheme: "system",
+    themeStorageKey: "bdr-theme",
+    languageStorageKey: "bdr-language",
+    whatsappPrimary: "9948122236",
+    repository: "BDR",
+    githubUser: "bdr-vegetables",
+    basePath: "/BDR/",
+    canonicalUrl: "https://bdr-vegetables.github.io/BDR/"
   },
 
-  supplier: {
-    title: "Interested in Supplying Vegetables?",
-    message:
-      "Farmers, traders and vegetable suppliers can contact BDR Vegetables for supplier-related enquiries and business discussions."
-  },
-
-  vegetableCategories: [
-    { name: "Leafy Vegetables", image: "assets/vegetables/leafy.svg" },
-    { name: "Root Vegetables", image: "assets/vegetables/root.svg" },
-    { name: "Tomatoes", image: "assets/vegetables/tomato.svg" },
-    { name: "Onions", image: "assets/vegetables/onion.svg" },
-    { name: "Green Chillies", image: "assets/vegetables/chilli.svg" },
-    { name: "Gourds", image: "assets/vegetables/gourd.svg" },
-    { name: "Cabbage & Cauliflower", image: "assets/vegetables/cabbage.svg" },
-    { name: "Seasonal Produce", image: "assets/vegetables/seasonal.svg" }
-  ],
-
-  /**
-   * Future product catalogue structure.
-   * Keep empty until actual product/availability information is supplied.
-   */
-  products: []
+  MESSAGES: {
+    primaryWhatsApp:
+      "Hello BDR Vegetables, I would like to enquire about wholesale vegetable supply.",
+    supplierWhatsApp:
+      "Hello BDR Vegetables, I would like to discuss a wholesale/supplier enquiry.",
+    productWhatsAppTemplate:
+      "Hello BDR Vegetables, I would like to enquire about {product} availability."
+  }
 };
