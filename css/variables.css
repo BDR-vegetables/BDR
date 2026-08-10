@@ -1,69 +1,69 @@
 :root {
-  /* Brand & produce palette */
-  --green-950: #0d2d1b;
+  /* Brand / produce palette */
+  --green-950: #0b3a20;
   --green-900: #14532d;
   --green-800: #166534;
   --green-700: #15803d;
   --green-600: #16a34a;
   --green-500: #22c55e;
   --lime-500: #84cc16;
-  --amber-600: #d97706;
   --amber-500: #f59e0b;
   --orange-500: #f97316;
   --tomato-500: #ef4444;
-
-  /* Logo-derived premium accents */
+  --brinjal-500: #6d4c7d;
+  --potato-500: #c89b5b;
+  --potato-300: #d8b77a;
   --brand-gold: #d8a84e;
-  --brand-ink: #1a120e;
-  --brand-gold-soft: #f4e4b7;
-
-  /* Surfaces */
-  --cream: #fffdf7;
-  --off-white: #f8faf5;
-  --sage: #ecf5ea;
-  --sage-2: #e4f0e1;
-  --surface: #ffffff;
-  --surface-warm: #fff8e9;
-  --surface-green: #f4f9f1;
-
-  /* Text */
-  --text-primary: #142018;
-  --text-secondary: #52605a;
-  --text-muted: #748079;
-  --text-on-dark: #f8fbf5;
-
-  /* Lines & shadows */
-  --border: rgba(20, 32, 24, 0.10);
-  --border-strong: rgba(20, 32, 24, 0.18);
-  --shadow-xs: 0 4px 16px rgba(18, 45, 27, 0.05);
-  --shadow-sm: 0 10px 28px rgba(18, 45, 27, 0.08);
-  --shadow-md: 0 18px 52px rgba(18, 45, 27, 0.12);
-  --shadow-lg: 0 28px 80px rgba(12, 37, 21, 0.16);
-
-  /* Radius */
-  --radius-xs: 10px;
-  --radius-sm: 12px;
-  --radius-md: 18px;
-  --radius-lg: 26px;
-  --radius-xl: 34px;
-  --radius-pill: 999px;
 
   /* Layout */
   --container: 1240px;
-  --header-height: 84px;
-  --section-space: clamp(72px, 9vw, 124px);
-  --page-pad: clamp(18px, 4vw, 56px);
+  --page-pad: clamp(18px, 4vw, 64px);
+  --section-y: clamp(58px, 7.5vw, 106px);
+  --header-h: 82px;
+  --header-h-scrolled: 68px;
+  --mobile-bar-h: 72px;
 
-  /* Type */
-  --font-heading: "Manrope", "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-body: "Inter", "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* Radius */
+  --radius-xs: 10px;
+  --radius-sm: 14px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-xs: 0 2px 10px rgba(20, 32, 24, 0.05);
+  --shadow-sm: 0 10px 30px rgba(20, 32, 24, 0.07);
+  --shadow-md: 0 18px 55px rgba(20, 32, 24, 0.10);
+  --shadow-lg: 0 28px 80px rgba(20, 32, 24, 0.14);
+
+  /* Typography */
+  --font-sans: "Manrope", "Noto Sans Telugu", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body: Inter, "Noto Sans Telugu", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --text-xs: 0.78rem;
+  --text-sm: 0.9rem;
+  --text-base: 1rem;
+  --text-lg: 1.1rem;
+  --text-xl: 1.25rem;
+  --heading-1: clamp(2.65rem, 5.8vw, 5.45rem);
+  --heading-2: clamp(2rem, 4vw, 3.55rem);
+  --heading-3: clamp(1.2rem, 2vw, 1.5rem);
 
   /* Motion */
-  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --duration-fast: 180ms;
-  --duration-normal: 300ms;
-  --duration-reveal: 620ms;
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-standard: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur-fast: 180ms;
+  --dur-base: 280ms;
+  --dur-slow: 520ms;
+  --dur-hero: 760ms;
 
-  /* Focus */
-  --focus: 0 0 0 4px rgba(34, 197, 94, 0.20);
+  /* Stacking */
+  --z-base: 1;
+  --z-sticky: 30;
+  --z-floating: 40;
+  --z-header: 50;
+  --z-dropdown: 70;
+  --z-overlay: 90;
+  --z-modal: 100;
+  --z-toast: 120;
 }
