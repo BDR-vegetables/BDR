@@ -1,140 +1,530 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light" data-language="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#166534">
+  <meta name="theme-color" content="#FFFDF7">
+  <meta name="color-scheme" content="light dark">
   <meta name="description" content="BDR Vegetables Wholesale Shop at Sri Durga Malleswara Wholesale Vegetable Market, Nunna. Contact us for wholesale vegetable supply, supplier enquiries and business requirements.">
-  <meta name="robots" content="index,follow">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="format-detection" content="telephone=yes">
 
   <title>BDR Vegetables Wholesale Shop | Nunna Wholesale Vegetable Market</title>
+  <link rel="canonical" href="https://bdr-vegetables.github.io/BDR/">
 
-  <!-- Replace BDR-vegetables and BDR before launch. -->
-  <link rel="canonical" href="https://BDR-vegetables.github.io/BDR/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BDR Vegetables Wholesale Shop">
   <meta property="og:title" content="BDR Vegetables Wholesale Shop | Nunna Wholesale Vegetable Market">
-  <meta property="og:description" content="Fresh vegetables, wholesale supply and direct business enquiries from Nunna Wholesale Vegetable Market.">
-  <meta property="og:url" content="https://BDR-vegetables.github.io/BDR/">
-  <meta property="og:image" content="https://BDR-vegetables.github.io/BDR/assets/images/social-preview.webp">
+  <meta property="og:description" content="Fresh vegetables, wholesale supply and direct business enquiries from Sri Durga Malleswara Wholesale Vegetable Market, Nunna.">
+  <meta property="og:url" content="https://bdr-vegetables.github.io/BDR/">
+  <meta property="og:image" content="https://bdr-vegetables.github.io/BDR/assets/images/social-preview.webp">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="BDR Vegetables Wholesale Shop social preview">
+  <meta property="og:image:alt" content="BDR Vegetables Wholesale Shop — Fresh Vegetables and Wholesale Supply">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:locale:alternate" content="te_IN">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BDR Vegetables Wholesale Shop | Nunna">
+  <meta name="twitter:description" content="Fresh vegetables • Wholesale supply • Quality service">
+  <meta name="twitter:image" content="https://bdr-vegetables.github.io/BDR/assets/images/social-preview.webp">
 
-  <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="./assets/logo/bdr-logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="./assets/logo/bdr-logo.png">
+  <link rel="manifest" href="./site.webmanifest">
+
+  <!-- Prevent theme/language flash before the main scripts load. -->
+  <script>
+    (() => {
+      try {
+        const savedTheme = localStorage.getItem("bdr-theme");
+        const theme = savedTheme === "dark" || savedTheme === "light"
+          ? savedTheme
+          : (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.dataset.theme = theme;
+        const savedLanguage = localStorage.getItem("bdr-language");
+        const language = savedLanguage === "te" ? "te" : "en";
+        document.documentElement.dataset.language = language;
+        document.documentElement.lang = language;
+      } catch (_) {
+        document.documentElement.dataset.theme = "light";
+        document.documentElement.dataset.language = "en";
+      }
+    })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&family=Noto+Sans+Telugu:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <link rel="stylesheet" href="./css/animations.css">
+
+  <script id="local-business-jsonld" type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Store","name":"BDR Vegetables Wholesale Shop","url":"https://bdr-vegetables.github.io/BDR/","telephone":"+919948122236","email":"bdrvegetablesvja@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Sri Durga Malleswara Wholesale Vegetable Market, Nunna Bypass Road","addressLocality":"Nunna","addressRegion":"Andhra Pradesh","postalCode":"521212","addressCountry":"IN"}}
+  </script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
 
   <header class="site-header" id="site-header">
     <div class="container nav-shell">
       <a class="brand" href="#home" aria-label="BDR Vegetables home">
-        <img class="brand-logo" src="assets/logo/bdr-logo.svg" width="58" height="58" alt="BDR Vegetables logo">
-        <span class="brand-copy"><span class="brand-name" data-short-name>BDR Vegetables</span><span class="brand-sub">Wholesale Vegetable Shop</span></span>
+        <img class="brand-logo" src="./assets/logo/bdr-logo.png" width="1024" height="1024" alt="BDR Vegetables logo">
+        <span class="brand-copy">
+          <span class="brand-name">BDR Vegetables</span>
+          <span class="brand-sub" data-i18n="brand.shopType">Wholesale Vegetable Shop</span>
+        </span>
       </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a class="nav-link" href="#home">Home</a><a class="nav-link" href="#about">About</a><a class="nav-link" href="#wholesale">Wholesale</a><a class="nav-link" href="#suppliers">Suppliers</a><a class="nav-link" href="#location">Location</a><a class="nav-link" href="#contact">Contact</a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a class="nav-link is-active" href="#home" data-i18n="nav.home">Home</a>
+        <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
+        <a class="nav-link" href="#wholesale" data-i18n="nav.wholesale">Wholesale</a>
+        <a class="nav-link" href="#vegetables" data-i18n="nav.vegetables">Vegetables</a>
+        <a class="nav-link" href="#suppliers" data-i18n="nav.suppliers">Suppliers</a>
+        <a class="nav-link" href="#location" data-i18n="nav.location">Location</a>
+        <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
-      <div class="nav-actions">
-        <a class="btn btn-primary" data-wa="bdr" href="#contact">WhatsApp Us</a>
-        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"><span></span></button>
+
+      <div class="header-tools">
+        <div class="segmented header-language" role="group" aria-label="Language">
+          <button type="button" data-language-choice="en" aria-pressed="true">EN</button>
+          <button type="button" data-language-choice="te" aria-pressed="false">తెలుగు</button>
+        </div>
+
+        <button class="icon-btn header-theme" type="button" data-theme-toggle aria-label="Switch theme" title="Theme">
+          <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
+        </button>
+
+        <a class="btn btn-primary header-whatsapp" data-action="whatsapp-primary" href="https://wa.me/919948122236?text=Hello%20BDR%20Vegetables%2C%20I%20would%20like%20to%20enquire%20about%20wholesale%20vegetable%20supply." target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/><path d="M8 9h8M8 13h5"/></svg>
+          <span data-i18n="ui.whatsappUs">WhatsApp Us</span>
+        </a>
+
+        <button class="icon-btn mobile-menu-button" id="menu-button" type="button" aria-controls="menu-overlay" aria-expanded="false" data-i18n-aria="ui.menu" aria-label="Menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
       </div>
     </div>
   </header>
 
-  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
-    <a class="nav-link" href="#home">Home</a><a class="nav-link" href="#about">About</a><a class="nav-link" href="#wholesale">Wholesale</a><a class="nav-link" href="#suppliers">Suppliers</a><a class="nav-link" href="#location">Location</a><a class="nav-link" href="#contact">Contact</a>
-    <div class="mobile-quick-actions"><a class="btn btn-secondary" data-call-shop href="#contact">Call</a><a class="btn btn-primary" data-wa="bdr" href="#contact">WhatsApp</a><a class="btn btn-accent" data-map-link href="#location">Directions</a></div>
-  </nav>
+  <div class="menu-overlay" id="menu-overlay" aria-hidden="true">
+    <div class="menu-backdrop" aria-hidden="true"></div>
+    <aside class="mobile-menu-panel" aria-label="Mobile navigation">
+      <div class="mobile-menu-head">
+        <div class="mobile-menu-brand">
+          <img src="./assets/logo/bdr-logo.png" width="1024" height="1024" alt="">
+          <span>BDR Vegetables</span>
+        </div>
+        <button class="icon-btn" id="menu-close" type="button" data-i18n-aria="ui.closeMenu" aria-label="Close menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <nav class="mobile-menu-links" aria-label="Mobile primary navigation">
+        <a class="nav-link is-active" href="#home" data-i18n="nav.home">Home</a>
+        <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
+        <a class="nav-link" href="#wholesale" data-i18n="nav.wholesale">Wholesale</a>
+        <a class="nav-link" href="#vegetables" data-i18n="nav.vegetables">Vegetables</a>
+        <a class="nav-link" href="#suppliers" data-i18n="nav.suppliers">Suppliers</a>
+        <a class="nav-link" href="#location" data-i18n="nav.location">Location</a>
+        <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="mobile-menu-quick">
+        <a class="btn btn-secondary" data-action="call-primary" href="tel:9948122236"><span data-i18n="ui.call">Call</span></a>
+        <a class="btn btn-primary" data-action="whatsapp-primary" href="https://wa.me/919948122236" target="_blank" rel="noopener noreferrer"><span data-i18n="ui.whatsapp">WhatsApp</span></a>
+        <a class="btn btn-accent" data-action="map" href="https://maps.app.goo.gl/eSxsCNk1rtC9Xaxu9?g_st=ac" target="_blank" rel="noopener noreferrer"><span data-i18n="ui.directions">Directions</span></a>
+      </div>
+
+      <div class="menu-settings">
+        <div class="setting-row">
+          <span class="setting-label" data-i18n="ui.language">Language</span>
+          <div class="segmented" role="group" aria-label="Language">
+            <button type="button" data-language-choice="en" aria-pressed="true">English</button>
+            <button type="button" data-language-choice="te" aria-pressed="false">తెలుగు</button>
+          </div>
+        </div>
+        <div class="setting-row">
+          <span class="setting-label" data-i18n="ui.theme">Theme</span>
+          <div class="segmented" role="group" aria-label="Theme">
+            <button type="button" data-theme-choice="light" aria-pressed="true" data-i18n="ui.light">Light</button>
+            <button type="button" data-theme-choice="dark" aria-pressed="false" data-i18n="ui.dark">Dark</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
 
   <main id="main">
     <section class="hero section" id="home">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="hero-kicker reveal" data-hero-eyebrow>Fresh produce. Direct business communication.</div>
-          <h1 class="reveal reveal-delay-1"><span data-hero-title-1>Fresh Vegetables.</span><span class="accent-line" data-hero-title-2>Reliable Wholesale Supply.</span></h1>
-          <p class="hero-description reveal reveal-delay-2" data-hero-description></p>
-          <div class="hero-meta reveal reveal-delay-3"><span>Shop No. <strong data-shop-nos>41 • 42 • 43 • 44</strong></span><span><strong data-market>Sri Durga Malleswara Wholesale Vegetable Market</strong>, <span data-locality>Nunna</span></span></div>
-          <div class="hero-actions reveal reveal-delay-4"><a class="btn btn-primary" data-wa="bdr" href="#contact">WhatsApp Us</a><a class="btn btn-secondary" data-map-link href="#location">Get Directions</a><a class="btn btn-accent" href="#suppliers">Become a Supplier</a></div>
-          <p class="hero-note reveal" data-tagline>Fresh Vegetables • Wholesale Supply • Quality Service</p>
+          <div class="hero-brandline reveal" data-i18n="hero.brand">BDR VEGETABLES</div>
+          <div class="eyebrow reveal" data-i18n="hero.eyebrow">Fresh produce. Direct business communication.</div>
+          <h1 class="reveal reveal-delay-1">
+            <span data-i18n="hero.line1">Fresh Vegetables.</span>
+            <span class="accent-line" data-i18n="hero.line2">Reliable Wholesale Supply.</span>
+          </h1>
+          <p class="hero-description reveal reveal-delay-2" data-i18n="hero.description">BDR Vegetables Wholesale Shop provides fresh vegetables and wholesale supply services for retailers, traders, restaurants, hotels, institutions and bulk buyers from Sri Durga Malleswara Wholesale Vegetable Market, Nunna.</p>
+
+          <div class="hero-meta reveal reveal-delay-2">
+            <span class="hero-meta-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l2-5h14l2 5M5 13v7h14v-7M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/></svg>
+              <span><span data-i18n="hero.shopNo">Shop No.</span> <strong data-shop-numbers>41 • 42 • 43 • 44</strong></span>
+            </span>
+            <span class="hero-meta-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span><strong data-market>Sri Durga Malleswara Wholesale Vegetable Market</strong>, <span data-locality>Nunna</span></span>
+            </span>
+          </div>
+
+          <div class="hero-actions reveal reveal-delay-3">
+            <a class="btn btn-primary" data-action="whatsapp-primary" href="https://wa.me/919948122236?text=Hello%20BDR%20Vegetables%2C%20I%20would%20like%20to%20enquire%20about%20wholesale%20vegetable%20supply." target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg>
+              <span><span data-i18n="ui.whatsapp">WhatsApp</span> <span data-primary-phone-display>99481 22236</span></span>
+            </a>
+            <a class="btn btn-secondary" data-action="map" href="https://maps.app.goo.gl/eSxsCNk1rtC9Xaxu9?g_st=ac" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span data-i18n="ui.getDirections">Get Directions</span>
+            </a>
+            <a class="btn btn-accent" href="#vegetables">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4c-7.5.2-12.4 3.1-14.6 8.7-1.1 2.9-.7 5.4.4 7.3 1.9-5.4 5.1-8.6 9.8-10.8-4 2.8-6.6 6.4-7.9 10.8"/></svg>
+              <span data-i18n="ui.exploreVegetables">Explore Vegetables</span>
+            </a>
+          </div>
+
+          <div class="hero-contact-line reveal reveal-delay-3">
+            <span data-i18n="brand.tagline">Fresh Vegetables • Wholesale Supply • Quality Service</span>
+            <span aria-hidden="true">•</span>
+            <span><span data-i18n="contact.mainTitle">Main Contact</span>: <strong data-primary-name>Ramesh</strong></span>
+          </div>
         </div>
 
-        <div class="hero-visual" aria-label="Vegetable wholesale visual composition">
-          <div class="produce-stage"><img src="assets/images/hero-vegetables.svg" width="900" height="920" alt="Illustrative composition of fresh vegetables for BDR Vegetables"><span class="placeholder-note">Replace with shop / produce photo anytime</span><div class="stage-overlay"></div></div>
-          <div class="logo-medallion"><img src="assets/logo/bdr-logo.svg" alt="" aria-hidden="true"></div>
-          <div class="float-badge float-badge--1"><i></i>Fresh Produce</div>
-          <div class="float-badge float-badge--2"><i></i>Shop 41–44</div>
-          <div class="float-badge float-badge--3"><i></i>Nunna Market</div>
+        <div class="hero-visual reveal reveal-delay-1" aria-label="Fresh vegetable visual composition">
+          <div class="hero-logo-mark"><img src="./assets/logo/bdr-logo.png" width="1024" height="1024" alt="" aria-hidden="true"></div>
+          <div class="produce-collage" aria-hidden="true">
+            <figure class="produce-piece produce-piece--1"><img src="./assets/vegetables/cauliflower.webp" width="1000" height="760" alt=""></figure>
+            <figure class="produce-piece produce-piece--2"><img src="./assets/vegetables/carrot.webp" width="1000" height="760" alt=""></figure>
+            <figure class="produce-piece produce-piece--3"><img src="./assets/vegetables/brinjal.webp" width="1000" height="760" alt=""></figure>
+            <figure class="produce-piece produce-piece--4"><img src="./assets/vegetables/curry-potato.webp" width="1000" height="760" alt=""></figure>
+          </div>
+          <span class="hero-badge hero-badge--1" data-i18n="hero.badgeFresh">Fresh Produce</span>
+          <span class="hero-badge hero-badge--2" data-i18n="hero.badgeShops">Shops 41–44</span>
+          <span class="hero-badge hero-badge--3" data-i18n="hero.badgeMarket">Nunna Market</span>
         </div>
       </div>
     </section>
 
-    <div class="highlight-strip"><div class="container"><div class="highlight-grid" id="highlight-grid"></div></div></div>
+    <section class="highlight-strip" aria-label="Business highlights">
+      <div class="container">
+        <div class="highlight-shell">
+          <div class="highlight-grid" id="highlight-grid"></div>
+        </div>
+      </div>
+    </section>
 
     <section class="section section--sage" id="about">
       <div class="container split">
         <div class="about-copy reveal">
-          <div class="eyebrow">About BDR</div>
-          <h2>Your Wholesale Vegetable Partner</h2>
-          <p class="lead">BDR Vegetables Wholesale Shop operates from Sri Durga Malleswara Wholesale Vegetable Market at Nunna, providing fresh vegetables and wholesale supply services for retailers, businesses, traders and bulk buyers.</p>
-          <p>For wholesale, supplier and business enquiries, visitors can connect directly with BDR or Ramesh. Shop staff contacts are also available for direct shop communication.</p>
-          <div class="shop-chips"><span class="shop-chip">Owner: <span data-owner>Badeti Dharma Rao</span></span><span class="shop-chip">Shop <span data-shop-nos>41 • 42 • 43 • 44</span></span></div>
+          <div class="eyebrow" data-i18n="about.eyebrow">About BDR</div>
+          <h2 data-i18n="about.title">Your Wholesale Vegetable Partner</h2>
+          <p class="lead" data-i18n="about.description">BDR Vegetables Wholesale Shop operates from Sri Durga Malleswara Wholesale Vegetable Market at Nunna, serving wholesale vegetable buyers, retailers, businesses and traders.</p>
+          <p data-i18n="about.detail">For wholesale, supplier and general business enquiries, the primary contact is Ramesh. BDR and shop staff numbers are available as secondary contact options.</p>
+          <div class="info-chips">
+            <span class="info-chip"><span data-i18n="about.owner">Owner</span>: <strong data-owner>Badeti Dharma Rao</strong></span>
+            <span class="info-chip"><span data-i18n="about.shop">Shop</span>: <strong data-shop-numbers>41 • 42 • 43 • 44</strong></span>
+            <span class="info-chip" data-i18n="about.wholesale">Wholesale Business</span>
+            <span class="info-chip" data-i18n="about.location">Nunna Market</span>
+          </div>
         </div>
-        <div class="about-visual reveal reveal-delay-2"><div class="photo-frame"><img src="assets/images/shop-front.svg" loading="lazy" width="900" height="700" alt="Placeholder visual for BDR Vegetables shop or wholesale market photograph"><span class="placeholder-note">Shop photo placeholder</span></div><div class="owner-card"><small>Owner</small><strong data-owner>Badeti Dharma Rao</strong><div class="shop-chips"><span class="shop-chip">Wholesale</span><span class="shop-chip">Nunna Market</span></div></div></div>
+
+        <div class="about-visual reveal reveal-delay-1">
+          <div class="shop-image-shell">
+            <div class="shop-placeholder">
+              <div class="shop-placeholder-inner">
+                <div class="market-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l2-5h14l2 5M5 13v7h14v-7M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M9 20v-5h6v5"/></svg>
+                </div>
+                <strong>BDR Vegetables · Shops 41–44</strong>
+                <span data-i18n="about.imageLabel">Shop / market image area</span>
+              </div>
+            </div>
+          </div>
+          <div class="owner-card">
+            <small data-i18n="about.owner">Owner</small>
+            <strong data-owner>Badeti Dharma Rao</strong>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section section--cream" id="wholesale">
-      <div class="container"><div class="section-heading center reveal"><div class="eyebrow">Wholesale service</div><h2>Wholesale Supply Built for Business</h2><p class="lead">A direct, practical enquiry flow for fresh produce requirements, bulk buying and supplier conversations.</p></div><div class="card-grid" id="wholesale-grid"></div></div>
+    <section class="section section--white" id="wholesale">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <div class="eyebrow" data-i18n="wholesale.eyebrow">Wholesale service</div>
+          <h2 data-i18n="wholesale.title">Wholesale Supply Built for Business</h2>
+          <p class="lead" data-i18n="wholesale.lead">A direct and practical enquiry flow for fresh produce requirements, bulk buying and supplier conversations.</p>
+        </div>
+        <div class="card-grid" id="wholesale-grid"></div>
+      </div>
     </section>
 
-    <section class="section section--white" id="categories">
-      <div class="container"><div class="section-heading reveal"><div class="eyebrow">Illustrative categories</div><h2>Fresh Produce Categories</h2><p class="lead">A visual guide to common vegetable categories. Exact day-to-day availability should be confirmed directly with BDR Vegetables.</p></div><div class="categories-grid" id="categories-grid"></div><div class="category-note reveal"><strong>Availability note:</strong> These categories are illustrative and do not represent a guaranteed daily catalogue. Contact us for today’s availability and wholesale enquiries.</div></div>
+    <section class="section section--off" id="vegetables">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="eyebrow" data-i18n="products.eyebrow">Vegetable showcase</div>
+          <h2 data-i18n="products.title">Fresh Wholesale Vegetables</h2>
+          <p class="lead" data-i18n="products.lead">Explore the primary vegetables featured by BDR Vegetables. Contact us to confirm current availability for wholesale requirements.</p>
+        </div>
+        <div class="product-grid" id="product-grid"></div>
+        <div class="product-note reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+          <span data-i18n="products.availabilityNote">Product cards are for enquiry purposes only. Current stock, price, grade and quantity are not stated on this website.</span>
+        </div>
+      </div>
     </section>
 
     <section class="section section--green-tint" id="why-bdr">
-      <div class="container"><div class="section-heading center reveal"><div class="eyebrow">Why BDR</div><h2>Direct, Accessible and Wholesale-Focused</h2><p class="lead">Designed around practical business communication and a clear market location, without unsupported claims or marketing noise.</p></div><div class="why-grid" id="why-grid"></div></div>
+      <div class="container">
+        <div class="section-heading center reveal">
+          <div class="eyebrow" data-i18n="why.eyebrow">Why BDR</div>
+          <h2 data-i18n="why.title">Direct, Accessible and Wholesale-Focused</h2>
+          <p class="lead" data-i18n="why.lead">A practical wholesale business experience centred on direct communication and a clear market location.</p>
+        </div>
+        <div class="why-grid" id="why-grid"></div>
+      </div>
     </section>
 
     <section class="section section--white" id="buyers">
-      <div class="container"><div class="section-heading reveal"><div class="eyebrow">Who we serve</div><h2>Built for Wholesale Buyers and Suppliers</h2><p class="lead">The website keeps communication paths clear for the business categories most likely to need wholesale produce or supplier discussions.</p></div><div class="audience-grid" id="audience-grid"></div></div>
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="eyebrow" data-i18n="serve.eyebrow">Who we serve</div>
+          <h2 data-i18n="serve.title">Built for Wholesale Buyers and Suppliers</h2>
+          <p class="lead" data-i18n="serve.lead">Clear enquiry routes for businesses and people involved in wholesale vegetable buying and supply.</p>
+        </div>
+        <div class="audience-grid" id="audience-grid"></div>
+      </div>
     </section>
 
     <section class="section section--cream" id="suppliers">
-      <div class="container"><div class="supplier-shell"><div class="supplier-layout"><div><div class="eyebrow">Supplier enquiries</div><h2 data-supplier-title>Interested in Supplying Vegetables?</h2><p class="lead" data-supplier-message></p><div class="supplier-contacts" id="supplier-contacts"></div></div><div class="supply-chain" aria-label="Supplier to wholesale buyer flow"><div class="chain-node reveal"><div class="icon-box"><svg class="icon" viewBox="0 0 24 24"><path d="M3 20h18M4 20c0-7 3-11 8-15 5 4 8 8 8 15M8 20c0-4 1-7 4-10 3 3 4 6 4 10"/></svg></div><div><strong>Farm / Supplier</strong><p>Supplier-related business discussion</p></div></div><div class="chain-arrow"></div><div class="chain-node reveal reveal-delay-1"><div class="icon-box"><img src="assets/logo/bdr-logo.svg" alt="" aria-hidden="true" style="width:34px;height:34px;object-fit:contain"></div><div><strong>BDR Vegetables</strong><p>Wholesale market business connection</p></div></div><div class="chain-arrow"></div><div class="chain-node reveal reveal-delay-2"><div class="icon-box"><svg class="icon" viewBox="0 0 24 24"><path d="M3 9l2-5h14l2 5M5 13v7h14v-7M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/></svg></div><div><strong>Wholesale Buyers</strong><p>Retailers, traders, businesses and institutions</p></div></div></div></div></div></div>
+      <div class="container">
+        <div class="supplier-shell reveal">
+          <div class="supplier-layout">
+            <div>
+              <div class="eyebrow" data-i18n="supplier.eyebrow">Supplier enquiries</div>
+              <h2 data-i18n="supplier.title">Interested in Supplying Vegetables?</h2>
+              <p class="lead" data-i18n="supplier.lead">Farmers, traders and vegetable suppliers can contact BDR Vegetables for supplier-related enquiries and business discussions.</p>
+              <div class="supplier-actions">
+                <a class="btn btn-primary" data-action="whatsapp-supplier" href="https://wa.me/919948122236" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg>
+                  <span><span data-i18n="ui.whatsapp">WhatsApp</span> <span data-primary-phone-display>99481 22236</span></span>
+                </a>
+                <a class="btn btn-secondary" data-action="call-bdr" href="tel:9848122236">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18"/></svg>
+                  <span>BDR · <span data-bdr-phone-display>98481 22236</span></span>
+                </a>
+              </div>
+              <div class="supplier-meta">
+                <span><strong data-i18n="supplier.mainContact">Primary supplier contact</strong> <span data-primary-name>Ramesh</span> · <span data-primary-phone-display>99481 22236</span></span>
+                <span><strong data-i18n="supplier.secondaryContact">Secondary contact</strong> BDR · <span data-bdr-phone-display>98481 22236</span></span>
+              </div>
+            </div>
+
+            <div class="supply-flow" aria-label="Supplier to BDR Vegetables to wholesale buyers">
+              <article class="flow-node">
+                <div class="icon-box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21c0-6 3-10 8-14 5 4 8 8 8 14"/><path d="M12 7V3M8 5l4 2 4-2M7 21h10"/></svg></div>
+                <strong data-i18n="supplier.flowSupplier">Farmer / Supplier</strong>
+                <p data-i18n="supplier.flowSupplierText">Supplier-related business discussion</p>
+              </article>
+              <span class="flow-arrow" aria-hidden="true"></span>
+              <article class="flow-node">
+                <div class="icon-box"><img class="flow-logo" src="./assets/logo/bdr-logo.png" width="1024" height="1024" alt="" aria-hidden="true"></div>
+                <strong data-i18n="supplier.flowBdr">BDR Vegetables</strong>
+                <p data-i18n="supplier.flowBdrText">Wholesale market business connection</p>
+              </article>
+              <span class="flow-arrow" aria-hidden="true"></span>
+              <article class="flow-node">
+                <div class="icon-box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
+                <strong data-i18n="supplier.flowBuyers">Wholesale Buyers</strong>
+                <p data-i18n="supplier.flowBuyersText">Retailers, traders, businesses and institutions</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="section section--white" id="contact">
-      <div class="container"><div class="section-heading center reveal"><div class="eyebrow">Contact hub</div><h2>Talk to BDR Vegetables</h2><p class="lead">Call, WhatsApp, copy a number or send an email using the channel most convenient for your enquiry.</p></div><div class="contact-grid"><article class="contact-panel reveal"><h3>Business & Supplier Enquiries</h3><div class="contact-list" id="business-contacts"></div></article><article class="contact-panel reveal reveal-delay-1"><h3>Shop Staff</h3><div class="contact-list" id="shop-contacts"></div><div class="email-card"><div><small>Email</small><p data-email>Email address</p></div><a class="btn btn-secondary" data-email-link href="#contact">Send Email</a></div></article></div></div>
+    <section class="section section--off" id="contact">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <div class="eyebrow" data-i18n="contact.eyebrow">Contact hub</div>
+          <h2 data-i18n="contact.title">Talk to BDR Vegetables</h2>
+          <p class="lead" data-i18n="contact.lead">Call, WhatsApp, copy a number or send an email using the channel most convenient for your enquiry.</p>
+        </div>
+
+        <div class="contact-layout">
+          <article class="contact-panel contact-panel--primary reveal">
+            <div class="contact-panel-head">
+              <h3 data-i18n="contact.mainTitle">Main Contact</h3>
+              <span class="primary-badge" data-i18n="contact.primary">Primary</span>
+            </div>
+            <div class="contact-person">
+              <span class="contact-name" data-primary-name>Ramesh</span>
+              <a class="phone-display" data-action="call-primary" href="tel:9948122236" data-primary-phone-display>99481 22236</a>
+              <div class="contact-actions" id="primary-contact-actions"></div>
+            </div>
+          </article>
+
+          <article class="contact-panel reveal reveal-delay-1">
+            <div class="contact-panel-head">
+              <h3 data-i18n="contact.secondaryTitle">Secondary Contacts</h3>
+              <span class="primary-badge" data-i18n="contact.secondary">Secondary</span>
+            </div>
+            <div class="secondary-contact-list" id="secondary-contact-list"></div>
+            <div class="email-row">
+              <div>
+                <span data-i18n="contact.emailTitle">Email</span>
+                <strong data-email-display>bdrvegetablesvja@gmail.com</strong>
+              </div>
+              <a class="btn btn-secondary" data-action="email" href="mailto:bdrvegetablesvja@gmail.com?subject=BDR%20Vegetables%20Business%20Enquiry">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                <span data-i18n="ui.sendEmail">Send Email</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section class="section section--sage" id="location">
-      <div class="container location-layout"><div class="address-card reveal"><div class="eyebrow">Location</div><h2>Find Us at Nunna Wholesale Market</h2><div class="address-lines" data-address-lines></div><a class="btn btn-primary" data-map-link href="#location">Open in Google Maps</a></div><div class="map-visual reveal reveal-delay-1"><img src="assets/images/market-map.svg" loading="lazy" width="900" height="650" alt="Stylized map placeholder for Nunna wholesale market location"><div class="map-pin-card"><strong>BDR Vegetables · Shop 41–44</strong><span>Sri Durga Malleswara Wholesale Vegetable Market, Nunna</span></div></div></div>
+      <div class="container location-layout">
+        <article class="address-card reveal">
+          <div class="eyebrow" data-i18n="location.eyebrow">Location</div>
+          <h2 data-i18n="location.title">Find Us at Nunna Wholesale Market</h2>
+          <div class="address-lines">
+            <strong data-business-name>BDR Vegetables Wholesale Shop</strong>
+            <span><span data-i18n="about.shop">Shop</span> <span data-shop-numbers>41 • 42 • 43 • 44</span></span>
+            <span data-market>Sri Durga Malleswara Wholesale Vegetable Market</span>
+            <span><span data-road>Nunna Bypass Road</span>, <span data-locality>Nunna</span></span>
+            <span><span data-state>Andhra Pradesh</span> – <span data-pincode>521212</span></span>
+          </div>
+          <a class="btn btn-primary" data-action="map" href="https://maps.app.goo.gl/eSxsCNk1rtC9Xaxu9?g_st=ac" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span data-i18n="ui.openMaps">Open Google Maps</span>
+          </a>
+        </article>
+
+        <div class="map-card reveal reveal-delay-1" aria-label="Stylized location visual for Nunna wholesale market">
+          <span class="map-route" aria-hidden="true"></span>
+          <span class="map-pin" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <div class="map-label">
+            <strong data-i18n="location.mapLabel">BDR Vegetables · Shop 41–44</strong>
+            <span data-i18n="location.mapSub">Sri Durga Malleswara Wholesale Vegetable Market, Nunna</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="section section--white" id="final-cta">
-      <div class="container"><div class="final-cta-shell reveal"><div class="final-cta-content"><div class="eyebrow" style="color:#dff5df">Wholesale enquiries</div><h2>Need Fresh Vegetables in Wholesale?</h2><p>Connect directly with BDR Vegetables for wholesale requirements, supplier enquiries and general business enquiries.</p><div class="final-actions"><a class="btn btn-primary" data-wa="bdr" href="#contact">WhatsApp BDR</a><a class="btn btn-secondary" data-call-shop href="#contact">Call Shop</a><a class="btn btn-ghost" data-map-link href="#location">Get Directions</a></div></div></div></div>
+      <div class="container">
+        <div class="final-cta-shell reveal">
+          <div class="final-cta-content">
+            <div class="eyebrow" style="color:#dff5df" data-i18n="finalCta.eyebrow">Wholesale enquiries</div>
+            <h2 data-i18n="finalCta.title">Need Vegetables in Wholesale?</h2>
+            <p data-i18n="finalCta.lead">Connect with BDR Vegetables for wholesale requirements, supplier enquiries and general business enquiries.</p>
+            <div class="final-actions">
+              <a class="btn btn-primary" data-action="whatsapp-primary" href="https://wa.me/919948122236" target="_blank" rel="noopener noreferrer"><span><span data-i18n="ui.whatsapp">WhatsApp</span> <span data-primary-phone-display>99481 22236</span></span></a>
+              <a class="btn btn-ghost" data-action="call-primary" href="tel:9948122236"><span data-i18n="ui.callNow">Call Now</span></a>
+              <a class="btn btn-ghost" data-action="map" href="https://maps.app.goo.gl/eSxsCNk1rtC9Xaxu9?g_st=ac" target="_blank" rel="noopener noreferrer"><span data-i18n="ui.getDirections">Get Directions</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container"><div class="footer-grid"><div><div class="footer-brand"><img class="footer-logo" src="assets/logo/bdr-logo.svg" alt="BDR Vegetables logo"><div><h3 data-business-name>BDR Vegetables Wholesale Shop</h3><p data-tagline>Fresh Vegetables • Wholesale Supply • Quality Service</p></div></div><p class="footer-copy">Wholesale vegetable business enquiries and supplier communication from Sri Durga Malleswara Wholesale Vegetable Market, Nunna.</p></div><div><div class="footer-title">Navigate</div><nav class="footer-links" aria-label="Footer navigation"><a href="#home">Home</a><a href="#about">About</a><a href="#wholesale">Wholesale</a><a href="#suppliers">Suppliers</a><a href="#location">Location</a><a href="#contact">Contact</a></nav></div><div><div class="footer-title">Contact</div><div class="footer-contact" data-footer-contact></div></div></div><div class="footer-bottom"><span>© <span data-year></span> BDR Vegetables. All Rights Reserved.</span><span>Shop <span data-shop-nos>41 • 42 • 43 • 44</span> · Nunna, Andhra Pradesh</span></div></div>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img class="footer-logo" src="./assets/logo/bdr-logo.png" width="1024" height="1024" alt="BDR Vegetables logo">
+            <div>
+              <h3 data-business-name>BDR Vegetables Wholesale Shop</h3>
+              <p data-i18n="brand.tagline">Fresh Vegetables • Wholesale Supply • Quality Service</p>
+            </div>
+          </div>
+          <p class="footer-summary" data-i18n="footer.summary">Wholesale vegetable business enquiries and supplier communication from Sri Durga Malleswara Wholesale Vegetable Market, Nunna.</p>
+        </div>
+
+        <div>
+          <div class="footer-title" data-i18n="footer.navigate">Navigate</div>
+          <nav class="footer-links" aria-label="Footer navigation">
+            <a href="#home" data-i18n="nav.home">Home</a>
+            <a href="#about" data-i18n="nav.about">About</a>
+            <a href="#wholesale" data-i18n="nav.wholesale">Wholesale</a>
+            <a href="#vegetables" data-i18n="nav.vegetables">Vegetables</a>
+            <a href="#suppliers" data-i18n="nav.suppliers">Suppliers</a>
+            <a href="#location" data-i18n="nav.location">Location</a>
+            <a href="#contact" data-i18n="nav.contact">Contact</a>
+          </nav>
+        </div>
+
+        <div>
+          <div class="footer-title" data-i18n="footer.contact">Contact</div>
+          <div class="footer-contact">
+            <a data-action="call-primary" href="tel:9948122236"><span data-primary-name>Ramesh</span> · <span data-primary-phone-display>99481 22236</span></a>
+            <span>BDR · <span data-bdr-phone-display>98481 22236</span></span>
+            <a data-action="email" href="mailto:bdrvegetablesvja@gmail.com"><span data-email-display>bdrvegetablesvja@gmail.com</span></a>
+            <span><span data-i18n="footer.shop">Shop</span> <span data-shop-numbers>41 • 42 • 43 • 44</span></span>
+            <span data-i18n="footer.nunna">Nunna, Andhra Pradesh</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> BDR Vegetables. <span data-i18n="footer.rights">All Rights Reserved.</span></span>
+        <span><span data-market>Sri Durga Malleswara Wholesale Vegetable Market</span> · <span data-locality>Nunna</span></span>
+      </div>
+    </div>
   </footer>
 
-  <a class="desktop-whatsapp" data-wa="bdr" href="#contact" aria-label="WhatsApp BDR Vegetables"><svg class="icon" viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/><path d="M8 9h8M8 13h5"/></svg></a>
-  <nav class="mobile-action-bar" aria-label="Quick contact actions"><a data-call-shop href="#contact"><svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72"/></svg><span>Call</span></a><a data-wa="bdr" href="#contact"><svg class="icon" viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg><span>WhatsApp</span></a><a data-map-link href="#location"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Directions</span></a></nav>
-  <div class="toast" id="toast" role="status" aria-live="polite">Number copied</div>
+  <a class="desktop-whatsapp" data-action="whatsapp-primary" href="https://wa.me/919948122236" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp BDR Vegetables on 9948122236">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/><path d="M8 9h8M8 13h5"/></svg>
+  </a>
 
-  <noscript><div style="padding:16px;text-align:center;background:#fff8e9;color:#142018;font-family:system-ui">This site works best with JavaScript enabled. Core business information is shown throughout the page, and all direct links remain standard web links.</div></noscript>
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/animations.js"></script>
+  <nav class="mobile-action-bar" aria-label="Quick contact actions">
+    <a data-action="call-primary" href="tel:9948122236">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18"/></svg>
+      <span data-i18n="ui.call">Call</span>
+    </a>
+    <a data-action="whatsapp-primary" href="https://wa.me/919948122236" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg>
+      <span data-i18n="ui.whatsapp">WhatsApp</span>
+    </a>
+    <a data-action="map" href="https://maps.app.goo.gl/eSxsCNk1rtC9Xaxu9?g_st=ac" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      <span data-i18n="ui.directions">Directions</span>
+    </a>
+  </nav>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" data-i18n="ui.copied">Number copied</div>
+
+  <noscript>
+    <div style="padding:16px;text-align:center;background:#fff7e8;color:#142018;font-family:system-ui">
+      JavaScript is required for language switching, theme controls, dynamic product enquiries and copy-number actions. Direct call, WhatsApp, email and Maps links remain available.
+    </div>
+  </noscript>
+
+  <script src="./js/data.js"></script>
+  <script src="./js/products.js"></script>
+  <script src="./js/translations.js"></script>
+  <script src="./js/theme.js"></script>
+  <script src="./js/language.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/animations.js"></script>
 </body>
 </html>
