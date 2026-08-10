@@ -1,0 +1,30 @@
+@keyframes drift {
+  0%,100% { transform:translate3d(0,0,0); }
+  50% { transform:translate3d(0,-10px,0); }
+}
+@keyframes ambientScale {
+  0%,100% { transform:scale(1); }
+  50% { transform:scale(1.025); }
+}
+@keyframes glowMove {
+  0%,100% { background-position:0% 50%; }
+  50% { background-position:100% 50%; }
+}
+
+.hero-visual .produce-stage { animation:ambientScale 9s ease-in-out infinite; }
+.float-badge--1 { animation:drift 6.4s ease-in-out infinite; }
+.float-badge--2 { animation:drift 7.2s ease-in-out infinite reverse; }
+.float-badge--3 { animation:drift 7.8s ease-in-out infinite; }
+
+.reveal { opacity:0; transform:translateY(24px); transition:opacity var(--duration-reveal) var(--ease-out), transform var(--duration-reveal) var(--ease-out); }
+.reveal.in-view { opacity:1; transform:none; }
+.reveal-delay-1 { transition-delay:80ms; }
+.reveal-delay-2 { transition-delay:150ms; }
+.reveal-delay-3 { transition-delay:220ms; }
+.reveal-delay-4 { transition-delay:290ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior:auto; }
+  *, *::before, *::after { animation-duration:0.001ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:0.001ms !important; }
+  .reveal { opacity:1 !important; transform:none !important; }
+}
